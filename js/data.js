@@ -24,7 +24,7 @@ const projects = [
   {
     id: '/ticket-hack',
     name: 'Ticket-hack',
-    image: ['assets/images/phone-ticket-01.jpg', 'assets/images/phone-ticket-02.jpg'],
+    image: ['assets/images/ticket-phone-01.jpg', 'assets/images/ticket-phone-02.jpg'],
     description: 'Plataforma que busca ofrecer un espacio para el intercambio de boletos, principalmente para conciertos, desde una comunidad segura y confiable.<br>Ticket-hack es un proyecto colaborativo realizado durante la hackatón interna de Laboratoria. Utiliza Firebase como medio de autentificación e identificación del usuario. Hace uso de la API de Ticketmaster para mostrar los eventos más próximos en la ciudad.',
     type: 'Red social',
     do: 'Autentificación de usuario, creación de base de datos de usuarios y publicaciones en Firebase.',

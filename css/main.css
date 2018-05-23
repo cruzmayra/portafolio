@@ -59,7 +59,8 @@ footer,
 }
 
 #about-me img {
-  width: 90%;  
+  /* transform: translate(29.5337px, -5.26858px); */
+  width: 90%;
 }
 
 #about-me p {
@@ -145,6 +146,7 @@ footer a:hover,
 .projects {
   background-size: cover;
   background-position: center top;
+  background-repeat: no-repeat;
   height:15em;
   margin: 3% 0%;
 }
