@@ -40,7 +40,8 @@ footer,
   background: #bf1363;
 }
 
-#home a {
+#home a,
+#about-me > div:nth-child(1) > div.col-md-8.col-sm-12.text-center.about-me > div > p:nth-child(2) > a {
   color: #bf1363;
   text-decoration: none;
 }
@@ -120,6 +121,10 @@ footer a:hover,
 #projects h4,
 .cv-footer a  {
   color:#bf1363;
+}
+
+#projects > section.container.project-d > div > div.col-md-3.details-project > diV > p > a > i {
+  font-size: 2.5em;
 }
 
 #projects a {
