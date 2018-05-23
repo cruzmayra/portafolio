@@ -1,0 +1,223 @@
+body {
+  background: #a9ddd6;  
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0;
+}
+
+nav a,
+.h2-footer {
+  color: #fff;
+}
+
+#home nav a {
+ font-size: 1.7em;  
+}
+
+h2{
+  color:#bf1363;
+  font-weight: bold;
+  margin: 4% 0%;
+}
+
+h3 {
+  color:#bf1363;
+  margin: 5% 0%;
+}
+
+h4 {
+  margin-top: 2%;
+}
+
+footer {
+  margin-top: 4%;
+}
+
+footer,
+#landing nav,
+.intermedio span,
+.basic span,
+.btn {
+  background: #bf1363;
+}
+
+#home a {
+  color: #bf1363;
+  text-decoration: none;
+}
+
+.hide {
+  display:none;
+}
+
+.show {
+  display: block;
+}
+
+#about-me {
+  padding: 3% 0;
+}
+
+#about-me img {
+  width: 90%;  
+}
+
+#about-me p {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+#landing-navbar {
+  margin-left: 65%;
+}
+
+footer a,
+#about-me button a,
+.btn {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover,
+#about-me button a:hover,
+.btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#about-me > div.row.skills > div img {
+  /* margin: 0 2%; */
+  width: 3em;
+}
+
+#about-me > div.row.skills > div i {
+  color:#bf1363;
+  font-size: 3.5em;
+}
+
+#about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > i {
+  font-size: 3em;
+}
+
+#about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > img {
+  margin-bottom: 46px;
+  width: 3em;
+}
+
+#about-me > div.row.skills > div.soft {
+  background: #bf1363;
+  color: #fff;
+}
+
+#about-me > div.row.skills > div.soft > h3 {
+  color: #fff;
+}
+
+#about-me > div.row.skills > div.soft i {
+  color: #a9ddd6;
+  font-size: 2.6em;
+}
+
+#projects h4,
+.cv-footer a  {
+  color:#bf1363;
+}
+
+#projects a {
+  color:#4f4f4f;
+}
+
+.description-initial {
+  background: #a9ddd6;
+  font-size: 1.5em;
+  font-weight: 600;
+  height: 90vh;
+}
+
+.description {
+  margin-top: 15%;
+}
+
+.projects {
+  background-size: cover;
+  background-position: center top;
+  height:15em;
+  margin: 3% 0%;
+}
+
+.progress-bar {
+  background-color: #4f4f4f;
+  border-radius: 5px;
+  height: 1.5em;
+  margin-top: 3%;           
+  padding: 1%;
+  width: 90%;
+}
+
+.progress-bar span {
+  display: inline-block;
+  border-radius: 3px;  
+  height:100%;
+  transition: width .4s ease-in-out;    
+}
+
+.stripes span {
+  background-size: 30px 30px;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                      transparent 75%, transparent);            
+  
+  animation: animate-stripes 3s linear infinite;             
+}
+
+@keyframes animate-stripes {
+  0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+.description-project {
+  padding: 25% 0%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.9);
+	color: #a9ddd6;
+  display: none;
+}
+
+.project-item:hover .description-project {
+  top: 0;
+  display: block;
+  background: rgba(0,0,0,0.4);
+}
+
+.cv-footer {
+  background: #a9ddd6;
+  margin: 2% 0%;
+}
+
+.social-network{
+  margin: 3% 0;
+}
+
+.social-network a {
+  font-size: 2em;  
+  margin: 3%;
+}
+
+.jumbotron {
+  background: #a9ddd6;
+}
+
+.jumbotron img {
+  width: 100%;
+}
+
+.details-project {
+  border-left: 2px solid #bf1363;
+}
+
+.project-d img {
+  width: 50%;
+}
+
+.project-d .col-md-9 > p {
+  text-align: justify;
+}
