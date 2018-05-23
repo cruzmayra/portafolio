@@ -81,9 +81,9 @@ page('/labcar', e => {
          </div>
          <div>
            <h4>Ver el proyecto</h4>
-           <p class="text-center"><a href="${project.demo}"><i class="fas fa-eye"></i></a></p>
+           <p class="text-center"><a href="${project.demo}" target="_blank"><i class="fas fa-eye"></i></a></p>
            <h4>Ver código</h4>
-           <p class="text-center"><a href="${project.code}"><i class="fab fa-github-alt"></i></a></p>
+           <p class="text-center"><a href="${project.code}" target="_blank"><i class="fab fa-github-alt"></i></a></p>
          </div>
        </div>
      </div>
