@@ -1,5 +1,5 @@
 /*---------- función que centraliza al resto de las funciones ----------*/
-function loadPage() {
+const loadPage = () => {
   $('.load-landing').click(hideHome);
  }
 
@@ -15,8 +15,10 @@ function loadPage() {
   $('#landing').addClass('show');
  }
 
- $('.view').click(function(e){
+ $('.view').click(e => {
   e.preventDefault();
+  $('#home').removeClass('show');
+  $('#home').css('display','none');
   const pageRef = e.target.getAttribute('href');
   page(pageRef);
 })
@@ -41,14 +43,14 @@ page('/labcar', e => {
   getData(e.path);
 })
 
- function getData(dataProject) {
+  const getData = dataProject => {
    const project = projects.find( project => {
      return project.id === dataProject;
    })
    paintProject(project);
  }
 
- function paintProject(project) {
+ const paintProject = project => {
    $('#content-me').empty();
    let templateProject = '';
    templateProject += `<section id="projects">
@@ -95,4 +97,4 @@ page('/labcar', e => {
 
  $(document).ready(loadPage);
 
- page.start({ hashbang: true })
+ page.start({ hashbang: true });

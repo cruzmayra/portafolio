@@ -1119,9 +1119,10 @@ pathToRegexp_1.tokensToRegExp = tokensToRegExp_1;
    * Gets the `base`, which depends on whether we are using History or
    * hashbang routing.
    */
-  function getBase() {
+  function getBase() {    
     if(!!base) return base;
     var loc = hasWindow && pageWindow.location;
+    
     return (hasWindow && hashbang && loc.protocol === 'file:') ? loc.pathname : base;
   }
 
