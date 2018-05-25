@@ -89,7 +89,8 @@ page('/labcar', e => {
      </div>
    </section>
  </section>`;
- $('#content-me').append(templateProject); 
+ $('#content-me').append(templateProject);
+ $('html, body').animate({scrollTop:0}, 'slow');
  }
 
  $(document).ready(loadPage);
