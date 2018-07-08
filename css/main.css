@@ -4,12 +4,13 @@ body {
   padding: 0;
 }
 
+#landing-navbar > ul > li> a,
 nav a,
 .h2-footer {
   color: #fff;
 }
 
-#home nav a {
+#container nav a {
  font-size: 1.7em;  
 }
 
@@ -33,14 +34,14 @@ footer {
 }
 
 footer,
-#landing nav,
+#principal-nav,
 .intermedio span,
 .basic span,
 .btn {
   background: #bf1363;
 }
 
-#home a,
+#container a,
 #about-me > div:nth-child(1) > div.col-md-8.col-sm-12.text-center.about-me > div > p:nth-child(2) > a {
   color: #bf1363;
   text-decoration: none;
