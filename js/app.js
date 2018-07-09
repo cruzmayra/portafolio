@@ -1,25 +1,9 @@
 /*---------- función que centraliza al resto de las funciones ----------*/
  page('/', e => {
-  $('#container').html(`<nav class="navbar navbar-expand-lg justify-content-between row">
-  <a class="navbar-brand" href="/">
-    <img src="/assets/images/mc-logo.png" width="70" height="70" class="d-inline-block align-top" alt="mc-logo">
-  </a>
-  <div>
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="${data[0].github}" target="_blank"><i class="fab fa-github"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="${data[0].linkedin}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="${data[0].facebook}" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<section class="row d-flex justify-content-center align-self-center description-initial">
+  $('#principal-nav').addClass('hide')
+  $('footer').addClass('hide')
+  $('#nav-presentation').removeClass('hide')
+  $('#content-me').html(`<section class="row d-flex justify-content-center align-self-center description-initial">
   <div class="col-md-12 col-sm-12 text-center description">
     <p>¡Hola! Soy Mayra Cruz,<br>frontend developer<br>por <a href="http://www.laboratoria.la/" target="_blank">Laboratoria</a>.</p>
     <p class="animated infinite pulse"><a class="load-landing" href="/portafolio">Dale un vistazo a mi portafolio :)</a></p>
@@ -29,8 +13,10 @@
 
 
  page('/portafolio', e => {
-   $('#container').html(`<section id="content-me">
-   <section class="container" id="about-me">
+   $('#principal-nav').removeClass('hide')
+   $('footer').removeClass('hide')
+   $('#nav-presentation').addClass('hide')
+   $('#content-me').html(`<section class="container" id="about-me">
      <div class="row">
        <div class="col-md-4 col-sm-12 text-center">
          <img class="profile" src="assets/images/profile.jpg" alt="mc-profile">
@@ -62,19 +48,9 @@
            <div class="col-md-6 col-6">
              <p class="d-flex align-items-center"><i class="devicon-bootstrap-plain-wordmark"></i>&emsp;&emsp;Bootstrap</p>
              <p class="d-flex align-items-center"><i class="fab fa-npm"></i>&emsp;&emsp;Npm</p>
-             <p class="d-flex align-items-center"><img src="assets/images/materialize.png" alt="">&emsp;Materialize</p>
-             <p class="d-flex align-items-center"><img src="assets/images/firebase.png" alt="">&emsp;Firebase</p>
-             <div class="row">
-               <div class="col-md-12 col-12">
-                 <p class="d-flex align-items-center h6">También sé un poco de:</p>
-                 <p>
-                   <img src="assets/images/excel.png" alt="">                      
-                   <i class="devicon-jasmine-plain-wordmark"></i>
-                   <i class="devicon-wordpress-plain-wordmark"></i>
-                   <i class="devicon-react-original-wordmark"></i>
-                 </p>
-               </div>
-             </div>
+             <p class="d-flex align-items-center"><i class="devicon-react-original-wordmark"></i>&emsp;&emsp;React</p>
+             <p class="d-flex align-items-center"><img src="assets/images/materialize.png" alt="">&emsp;&emsp;Materialize</p>
+             <p class="d-flex align-items-center"><img src="assets/images/firebase.png" alt="">&emsp;&emsp;Firebase</p>
            </div>
          </div>    
        </div>
@@ -100,7 +76,7 @@
          <div class="card projects" style="background-image: url('assets/images/venus-button.jpg');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Venus e-commerce</h5>
-             <a href="/venus-ecommerce" class="btn view">Acerca del proyecto</a>
+             <a href="/venus-ecommerce" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -137,15 +113,12 @@
          </div>
        </div>                             
      </div>
-   </section>
-   
- </section>`)
+   </section>`)
  } )
 
  $('.view').click(e => {
   e.preventDefault();
   const pageRef = e.target.getAttribute('href');
-  // console.log(pageRef)
   page(pageRef);
 })
 
@@ -173,11 +146,13 @@ page('/labcar', e => {
    const project = data[1].find( project => {
      return project.id === dataProject;
    })
-  //  console.log(project)
    paintProject(project);
  }
 
  const paintProject = project => {
+  $('#principal-nav').removeClass('hide')
+  $('footer').removeClass('hide')
+  $('#nav-presentation').addClass('hide')
    $('#content-me').empty();
    let templateProject = '';
    templateProject += `<section id="projects">
@@ -201,7 +176,7 @@ page('/labcar', e => {
            <p>${project.type}</p>
          </div>
          <div>
-           <h4>Qué hice :)</h4>
+           <h4>¿Qué hice? :)</h4>
            <p>${project.do}</p>
          </div>
          <div>
