@@ -39,29 +39,29 @@
          <h3>Técnicas</h3>
          <div class="row">
            <div class="col-md-6 col-6">
-             <p class="d-flex align-items-center"><i class="devicon-javascript-plain"></i>&emsp;&emsp;JavaScript</p>
-             <p class="d-flex align-items-center"><i class="devicon-html5-plain-wordmark"></i>&emsp;&emsp;HTML5</p>
-             <p class="d-flex align-items-center"><i class="devicon-css3-plain-wordmark"></i>&emsp;&emsp;CSS3</p>
-             <p class="d-flex align-items-center"><i class="devicon-jquery-plain-wordmark"></i>&emsp;&emsp;jQuery</p>
-             <p class="d-flex align-items-center"><i class="devicon-git-plain"></i>&emsp;&emsp;Git</p>
+             <p class="d-flex align-items-center"><span class="icon-javascript"></span>&emsp;&emsp;JavaScript</p>
+             <p class="d-flex align-items-center"><span class="icon-html5"></span>&emsp;&emsp;HTML5</p>
+             <p class="d-flex align-items-center"><span class="icon-css3"></span>&emsp;&emsp;CSS3</p>
+             <p class="d-flex align-items-center"><span class="icon-jquery"></span>&emsp;&emsp;jQuery</p>
+             <p class="d-flex align-items-center"><span class="icon-git"></span>&emsp;&emsp;Git</p>
            </div>
            <div class="col-md-6 col-6">
-             <p class="d-flex align-items-center"><i class="devicon-bootstrap-plain-wordmark"></i>&emsp;&emsp;Bootstrap</p>
-             <p class="d-flex align-items-center"><i class="fab fa-npm"></i>&emsp;&emsp;Npm</p>
-             <p class="d-flex align-items-center"><i class="devicon-react-original-wordmark"></i>&emsp;&emsp;React</p>
+             <p class="d-flex align-items-center"><span class="icon-bootstrap"></span>&emsp;&emsp;Bootstrap</p>
+             <p class="d-flex align-items-center"><span class="icon-npm"></span>&emsp;&emsp;Npm</p>
+             <p class="d-flex align-items-center"><span class="icon-react"></span>&emsp;&emsp;React</p>
              <p class="d-flex align-items-center"><img src="assets/images/materialize.png" alt="">&emsp;&emsp;Materialize</p>
-             <p class="d-flex align-items-center"><img src="assets/images/firebase.png" alt="">&emsp;&emsp;Firebase</p>
+             <p class="d-flex align-items-center"><span class=icon-firebase></span>&emsp;&emsp;Firebase</p>
            </div>
          </div>    
        </div>
        <div class="col-md-6 soft">
          <h3>Socio-emocionales</h3>
          <div>
-           <p><i class="fas fa-lock-open"></i>&emsp;&emsp;Solución de problemas</p>
-           <p><i class="fas fa-graduation-cap"></i>&emsp;&emsp;Autoaprendizaje</p>
-           <p><i class="fas fa-users"></i>&emsp;&emsp;Trabajo en equipo</p>
-           <p><i class="fas fa-handshake"></i>&emsp;&emsp;Dar y recibir feedback</p>
-           <p><i class="fab fa-medapps"></i>&emsp;&emsp;Adaptabilidad</p>              
+           <p><span class="icon-unlock"></span>&emsp;&emsp;Solución de problemas</p>
+           <p><span class="icon-book-open"></span>&emsp;&emsp;Autoaprendizaje</p>
+           <p><span class="icon-users"></span>&emsp;&emsp;Trabajo en equipo</p>
+           <p><span class="icon-message-circle"></span>&emsp;&emsp;Dar y recibir feedback</p>
+           <p><span class="icon-git-pull-request"></span>&emsp;&emsp;Adaptabilidad</p>              
          </div>
        </div>
        
@@ -185,9 +185,9 @@ page('/labcar', e => {
          </div>
          <div>
            <h4>Ver el proyecto</h4>
-           <p class="text-center"><a href="${project.demo}" target="_blank"><i class="fas fa-eye"></i></a></p>
+           <p class="text-center"><a href="${project.demo}" target="_blank"><span class="icon-link"></span></a></p>
            <h4>Ver código</h4>
-           <p class="text-center"><a href="${project.code}" target="_blank"><i class="fab fa-github-alt"></i></a></p>
+           <p class="text-center"><a href="${project.code}" target="_blank"><span class="icon-code"></span></a></p>
          </div>
        </div>
      </div>

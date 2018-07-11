@@ -5,7 +5,6 @@ body {
 }
 
 #landing-navbar > ul > li> a,
-/* nav a, */
 #my-work > div > div > div > div > a,
 .h2-footer,
 footer a {
@@ -55,7 +54,7 @@ footer,
 }
 
 #about-me {
-  padding: 3% 0;
+  padding: 1rem 2rem;
 }
 
 #about-me img {
@@ -88,18 +87,19 @@ footer a:hover,
   text-decoration: none;
 }
 
+#about-me > div.row.skills > div.col-md-6 {
+  padding: 1rem 3rem;
+}
+
 #about-me > div.row.skills > div img {
   width: 3em;
 }
 
-#about-me > div.row.skills > div i {
+#about-me > div.row.skills > div span {
   color:#bf1363;
   font-size: 3.5em;
 }
 
-#about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > i {
-  font-size: 3em;
-}
 
 #about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > img {
   margin-bottom: 46px;
@@ -115,7 +115,7 @@ footer a:hover,
   color: #fff;
 }
 
-#about-me > div.row.skills > div.soft i {
+#about-me > div.row.skills > div.soft span {
   color: #a9ddd6;
   font-size: 2.6em;
 }
@@ -126,7 +126,7 @@ footer a:hover,
   color:#bf1363;
 }
 
-#projects > section.container.project-d > div > div.col-md-3.details-project > diV > p > a > i {
+#projects > section.container.project-d > div > div.col-md-3.details-project > diV > p > a > span {
   font-size: 2.5em;
 }
 
