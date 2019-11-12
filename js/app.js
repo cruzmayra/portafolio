@@ -73,7 +73,7 @@
          <div class="card projects" style="background-image: url('assets/images/venus-button.jpg');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Venus e-commerce</h5>
-             <a href="/portafolio/#!/mitrabajo/venus-ecommerce" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/venus-ecommerce" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -81,7 +81,7 @@
          <div class="card projects" style="background-image: url('assets/images/pokedex-button.png');">
            <div class="card-body description-project text-center">
              <h5 class="card-title">Pokedex</h5>
-             <a href="/portafolio/#!/mitrabajo/pokedex" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/pokedex" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -89,7 +89,7 @@
          <div class="card projects" style="background-image: url('assets/images/ticket-hack-button.png');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Ticket-hack</h5>
-             <a href="/portafolio/#!/mitrabajo/ticket-hack" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/ticket-hack" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -97,7 +97,7 @@
          <div class="card projects" style="background-image: url('assets/images/scribere-button.png');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Scribere</h5>
-             <a href="/portafolio/#!/mitrabajo/scribere" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/scribere" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -105,7 +105,7 @@
          <div class="card projects" style="background-image: url('assets/images/lc-button.jpg');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">LabCar</h5>
-             <a href="/portafolio/#!/mitrabajo/labcar" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/labcar" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
