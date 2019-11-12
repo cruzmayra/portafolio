@@ -1,7 +1,7 @@
 {
   "name": "page",
   "description": "Tiny client-side router",
-  "version": "1.8.6",
+  "version": "1.11.5",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,7 +12,9 @@
       "page": "index.js"
     }
   },
+  "main": "index.js",
   "browser": "page.js",
+  "module": "page.mjs",
   "scripts": {
     "engine-deps": "install-engine-dependencies",
     "test": "jshint index.js test/tests.js && mocha test/tests.js",
@@ -26,7 +28,7 @@
   "devDependencies": {
     "chai": "^1.10.0",
     "coveralls": "^2.11.2",
-    "engine-dependencies": "^0.2.0",
+    "engine-dependencies": "^0.2.12",
     "express": "^4.10.2",
     "jade": "^1.7.0",
     "jscoverage": "^0.5.9",
@@ -51,6 +53,7 @@
   },
   "files": [
     "index.js",
-    "page.js"
+    "page.js",
+    "page.mjs"
   ]
 }

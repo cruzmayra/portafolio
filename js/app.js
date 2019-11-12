@@ -1,33 +1,33 @@
 /*---------- función que centraliza al resto de las funciones ----------*/
- page('/', e => {
+ page('/portafolio', e => {
   $('#principal-nav').addClass('hide')
   $('footer').addClass('hide')
   $('#nav-presentation').removeClass('hide')
-  $('#content-me').html(`<section class="row d-flex justify-content-center align-self-center description-initial">
+  $('#content-me').html(`<section class="d-flex justify-content-center align-items-center description-initial">
   <div class="col-md-12 col-sm-12 text-center description">
-    <p>¡Hola! Soy Mayra Cruz,<br>frontend developer<br>por <a href="http://www.laboratoria.la/" target="_blank">Laboratoria</a>.</p>
-    <p class="animated infinite pulse"><a class="load-landing" href="/portafolio">Dale un vistazo a mi portafolio :)</a></p>
+    <p>¡Hola! Soy Mayra Cruz,<br>frontend developer.</p>
+    <p><a class="load-landing" href="/portafolio/home">Dale un vistazo a mi portafolio :)</a></p>
   </div>
 </section>`)
 } )
 
 
- page('/portafolio', e => {
+ page('/portafolio/home', e => {
    $('#principal-nav').removeClass('hide')
    $('footer').removeClass('hide')
    $('#nav-presentation').addClass('hide')
    $('#content-me').html(`<section class="container" id="about-me">
      <div class="row">
        <div class="col-md-4 col-sm-12 text-center">
-         <img class="profile" src="assets/images/profile.jpg" alt="mc-profile">
+         <img class="profile" src="assets/images/perfil_desenfoque.jpg" alt="mc-profile">
        </div>
        <div class="col-md-8 col-sm-12 text-center about-me">
          <h2>Acerca de mí</h2>
          <div>
            <h4>¡Hola! Soy Mayra Cruz</h4>
-           <p>Desarrolladora frontend egresada de la quinta generación de <a href="http://www.laboratoria.la/" target="_blank">Laboratoria</a>, amante del poder de la tecnología y del código como generadores de impacto social. Chilanga por adopción. Autodidacta.</p>
+           <p>Desarrolladora frontend radicada en CDMX, amante del poder de la tecnología y del código como generadores de impacto social. Chilanga por adopción. Autodidacta.</p>
            <p>Me gusta asistir a meetups y encontrar inspiración en el trabajo de otros. Busco proponer soluciones integrales por lo que me gustaría desarrollarme como fullstack developer en un futuro.</p>
-           <button type="button" class="btn btn-lg"><a href="assets/curriculum-mayra-cruz.pdf" target="_blank">Descarga mi CV</a></button>
+           <button type="button" class="btn btn-lg"><a href="assets/Mayra-Cruz-Resume.pdf" target="_blank">Descarga mi CV</a></button>
          </div>
        </div>
      </div>
@@ -39,29 +39,26 @@
          <h3>Técnicas</h3>
          <div class="row">
            <div class="col-md-6 col-6">
-             <p class="d-flex align-items-center"><i class="devicon-javascript-plain"></i>&emsp;&emsp;JavaScript</p>
-             <p class="d-flex align-items-center"><i class="devicon-html5-plain-wordmark"></i>&emsp;&emsp;HTML5</p>
-             <p class="d-flex align-items-center"><i class="devicon-css3-plain-wordmark"></i>&emsp;&emsp;CSS3</p>
-             <p class="d-flex align-items-center"><i class="devicon-jquery-plain-wordmark"></i>&emsp;&emsp;jQuery</p>
-             <p class="d-flex align-items-center"><i class="devicon-git-plain"></i>&emsp;&emsp;Git</p>
+             <p class="d-flex align-items-center"><span class="icon-javascript"></span>&emsp;&emsp;JavaScript</p>
+             <p class="d-flex align-items-center"><span class="icon-html5"></span>&emsp;&emsp;HTML</p>
+             <p class="d-flex align-items-center"><span class="icon-css3"></span>&emsp;&emsp;CSS</p>
+             <p class="d-flex align-items-center"><span class="icon-git"></span>&emsp;&emsp;Git</p>
+             <p class="d-flex align-items-center"><span class="icon-react"></span>&emsp;&emsp;React.js</p>
            </div>
            <div class="col-md-6 col-6">
-             <p class="d-flex align-items-center"><i class="devicon-bootstrap-plain-wordmark"></i>&emsp;&emsp;Bootstrap</p>
-             <p class="d-flex align-items-center"><i class="fab fa-npm"></i>&emsp;&emsp;Npm</p>
-             <p class="d-flex align-items-center"><i class="devicon-react-original-wordmark"></i>&emsp;&emsp;React</p>
-             <p class="d-flex align-items-center"><img src="assets/images/materialize.png" alt="">&emsp;&emsp;Materialize</p>
-             <p class="d-flex align-items-center"><img src="assets/images/firebase.png" alt="">&emsp;&emsp;Firebase</p>
+             <p class="d-flex align-items-center"><span class="icon-wordpress"></span>&emsp;&emsp;WordPress</p>
+             <p class="d-flex align-items-center"><span class="icon-microsoftexcel"></span>&emsp;&emsp;Excel</p>
            </div>
          </div>    
        </div>
        <div class="col-md-6 soft">
          <h3>Socio-emocionales</h3>
          <div>
-           <p><i class="fas fa-lock-open"></i>&emsp;&emsp;Solución de problemas</p>
-           <p><i class="fas fa-graduation-cap"></i>&emsp;&emsp;Autoaprendizaje</p>
-           <p><i class="fas fa-users"></i>&emsp;&emsp;Trabajo en equipo</p>
-           <p><i class="fas fa-handshake"></i>&emsp;&emsp;Dar y recibir feedback</p>
-           <p><i class="fab fa-medapps"></i>&emsp;&emsp;Adaptabilidad</p>              
+           <p><span class="icon-unlock-alt"></span>&emsp;&emsp;Solución de problemas</p>
+           <p><span class="icon-graduation-cap"></span>&emsp;&emsp;Autoaprendizaje</p>
+           <p><span class="icon-group"></span>&emsp;&emsp;Trabajo en equipo</p>
+           <p><span class="icon-handshake-o"></span>&emsp;&emsp;Dar y recibir feedback</p>
+           <p><span class="icon-paper-plane"></span>&emsp;&emsp;Adaptabilidad</p>              
          </div>
        </div>
        
@@ -76,7 +73,7 @@
          <div class="card projects" style="background-image: url('assets/images/venus-button.jpg');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Venus e-commerce</h5>
-             <a href="/venus-ecommerce" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/venus-ecommerce" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -84,7 +81,7 @@
          <div class="card projects" style="background-image: url('assets/images/pokedex-button.png');">
            <div class="card-body description-project text-center">
              <h5 class="card-title">Pokedex</h5>
-             <a href="/pokedex" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/pokedex" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -92,7 +89,7 @@
          <div class="card projects" style="background-image: url('assets/images/ticket-hack-button.png');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Ticket-hack</h5>
-             <a href="/ticket-hack" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/ticket-hack" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -100,7 +97,7 @@
          <div class="card projects" style="background-image: url('assets/images/scribere-button.png');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Scribere</h5>
-             <a href="/scribere" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/scribere" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -108,10 +105,10 @@
          <div class="card projects" style="background-image: url('assets/images/lc-button.jpg');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">LabCar</h5>
-             <a href="/labcar" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/labcar" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
-       </div>                             
+       </div>
      </div>
    </section>`)
  } )
@@ -119,26 +116,27 @@
  $('.view').click(e => {
   e.preventDefault();
   const pageRef = e.target.getAttribute('href');
+  // console.log(pageRef)
   page(pageRef);
 })
 
-page('/venus-ecommerce', e => {
+page('/mitrabajo/venus-ecommerce', function (e) {
   getData(e.path);
 })
 
-page('/pokedex', e => {
+page('/mitrabajo/pokedex', e => {
   getData(e.path);
 })
 
-page('/ticket-hack', e => {
+page('/mitrabajo/ticket-hack', e => {
   getData(e.path);
 })
 
-page('/scribere', e => {
+page('/mitrabajo/scribere', e => {
   getData(e.path);
 })
 
-page('/labcar', e => {
+page('/mitrabajo/labcar', e => {
   getData(e.path);
 })
 
@@ -185,9 +183,9 @@ page('/labcar', e => {
          </div>
          <div>
            <h4>Ver el proyecto</h4>
-           <p class="text-center"><a href="${project.demo}" target="_blank"><i class="fas fa-eye"></i></a></p>
+           <p class="text-center"><a href="${project.demo}" target="_blank"><span class="icon-link"></span></a></p>
            <h4>Ver código</h4>
-           <p class="text-center"><a href="${project.code}" target="_blank"><i class="fab fa-github-alt"></i></a></p>
+           <p class="text-center"><a href="${project.code}" target="_blank"><span class="icon-github"></span></a></p>
          </div>
        </div>
      </div>
@@ -197,4 +195,4 @@ page('/labcar', e => {
  $('html, body').animate({scrollTop:0}, 'slow');
  }
 
- page.start({ hashbang: false });
+ page.start({ hashbang: true });
