@@ -1,7 +1,8 @@
 body {
-  background: #a9ddd6;  
+  background: #fff;
+  color: #38618c;  
   font-family: 'Josefin Sans', sans-serif;
-  padding: 10% 0 0 0;
+  /* padding: 10% 0 0 0; */
 }
 
 #landing-navbar > ul > li> a,
@@ -17,13 +18,13 @@ footer a {
 }
 
 h2{
-  color:#bf1363;
+  color:#fa7268;
   font-weight: bold;
   margin: 4% 0%;
 }
 
 h3 {
-  color:#bf1363;
+  color:#fa7268;
   margin: 5% 0%;
 }
 
@@ -32,19 +33,24 @@ h4 {
 }
 
 footer {
+  background: #38618c;
   color: #fff;
   margin-top: 4%;
 }
 
-footer,
-#principal-nav,
-.intermedio span,
-.basic span,
 .btn {
+  background: #fa7268;
+}
+
+.intermedio span,
+.basic span {
   background: #bf1363;
 }
 
-#content-me a,
+#content-me a {
+  color: #fa7268;
+}
+
 #about-me > div:nth-child(1) > div.col-md-8.col-sm-12.text-center.about-me > div > p:nth-child(2) > a {
   color: #bf1363;
   text-decoration: none;
@@ -55,6 +61,7 @@ footer,
 }
 
 #about-me {
+  margin-top: 80px;
   padding: 3% 0;
 }
 
@@ -92,38 +99,43 @@ footer a:hover,
   width: 3em;
 }
 
-#about-me > div.row.skills > div i {
-  color:#bf1363;
-  font-size: 3.5em;
-}
-
-#about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > i {
+#about-me > div.row.skills > div span {
   font-size: 3em;
 }
 
-#about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > img {
+/* #about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > i {
+  font-size: 3em;
+} */
+
+/* #about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > img {
   margin-bottom: 46px;
   width: 3em;
-}
+} */
 
 #about-me > div.row.skills > div.soft {
-  background: #bf1363;
+  background: #38618c;
   color: #fff;
 }
 
-#about-me > div.row.skills > div.soft > h3 {
-  color: #fff;
-}
 
 #about-me > div.row.skills > div.soft i {
-  color: #a9ddd6;
-  font-size: 2.6em;
+  /* color: #ffe74c; */
+  font-size: 3em;
 }
 
-#nav-presentation > div > ul > li > a,
-#projects h4,
-.cv-footer a  {
-  color:#bf1363;
+#nav-presentation,
+#principal-nav {
+  background: #ffe74c;
+}
+
+#nav-presentation a,
+#principal-nav a,
+#landing-navbar > ul > li > a
+/* #nav-presentation > div > ul > li > a, */
+/* #projects h4,
+.cv-footer a  */
+{
+  color: #38618c;
 }
 
 #projects > section.container.project-d > div > div.col-md-3.details-project > diV > p > a > i {
@@ -135,10 +147,10 @@ footer a:hover,
 }
 
 .description-initial {
-  background: #a9ddd6;
+  background: #ffe74c;
   font-size: 1.5em;
   font-weight: 600;
-  height: 90vh;
+  height: 100vh;
 }
 
 .description {
@@ -198,7 +210,6 @@ footer a:hover,
 }
 
 .cv-footer {
-  background: #a9ddd6;
   margin: 2% 0%;
 }
 

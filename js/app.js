@@ -3,10 +3,10 @@
   $('#principal-nav').addClass('hide')
   $('footer').addClass('hide')
   $('#nav-presentation').removeClass('hide')
-  $('#content-me').html(`<section class="row d-flex justify-content-center align-self-center description-initial">
+  $('#content-me').html(`<section class="d-flex justify-content-center align-items-center description-initial">
   <div class="col-md-12 col-sm-12 text-center description">
-    <p>¡Hola! Soy Mayra Cruz,<br>frontend developer<br>por <a href="http://www.laboratoria.la/" target="_blank">Laboratoria</a>.</p>
-    <p class="animated infinite pulse"><a class="load-landing" href="/portafolio">Dale un vistazo a mi portafolio :)</a></p>
+    <p>¡Hola! Soy Mayra Cruz,<br>frontend developer.</p>
+    <p><a class="load-landing" href="/portafolio">Dale un vistazo a mi portafolio :)</a></p>
   </div>
 </section>`)
 } )
@@ -19,13 +19,13 @@
    $('#content-me').html(`<section class="container" id="about-me">
      <div class="row">
        <div class="col-md-4 col-sm-12 text-center">
-         <img class="profile" src="assets/images/profile.jpg" alt="mc-profile">
+         <img class="profile" src="assets/images/perfil_desenfoque.jpg" alt="mc-profile">
        </div>
        <div class="col-md-8 col-sm-12 text-center about-me">
          <h2>Acerca de mí</h2>
          <div>
            <h4>¡Hola! Soy Mayra Cruz</h4>
-           <p>Desarrolladora frontend egresada de la quinta generación de <a href="http://www.laboratoria.la/" target="_blank">Laboratoria</a>, amante del poder de la tecnología y del código como generadores de impacto social. Chilanga por adopción. Autodidacta.</p>
+           <p>Desarrolladora frontend radicada en CDMX, amante del poder de la tecnología y del código como generadores de impacto social. Chilanga por adopción. Autodidacta.</p>
            <p>Me gusta asistir a meetups y encontrar inspiración en el trabajo de otros. Busco proponer soluciones integrales por lo que me gustaría desarrollarme como fullstack developer en un futuro.</p>
            <button type="button" class="btn btn-lg"><a href="assets/curriculum-mayra-cruz.pdf" target="_blank">Descarga mi CV</a></button>
          </div>
@@ -39,29 +39,26 @@
          <h3>Técnicas</h3>
          <div class="row">
            <div class="col-md-6 col-6">
-             <p class="d-flex align-items-center"><i class="devicon-javascript-plain"></i>&emsp;&emsp;JavaScript</p>
-             <p class="d-flex align-items-center"><i class="devicon-html5-plain-wordmark"></i>&emsp;&emsp;HTML5</p>
-             <p class="d-flex align-items-center"><i class="devicon-css3-plain-wordmark"></i>&emsp;&emsp;CSS3</p>
-             <p class="d-flex align-items-center"><i class="devicon-jquery-plain-wordmark"></i>&emsp;&emsp;jQuery</p>
-             <p class="d-flex align-items-center"><i class="devicon-git-plain"></i>&emsp;&emsp;Git</p>
+             <p class="d-flex align-items-center"><span class="icon-javascript"></span>&emsp;&emsp;JavaScript</p>
+             <p class="d-flex align-items-center"><span class="icon-html5"></span>&emsp;&emsp;HTML</p>
+             <p class="d-flex align-items-center"><span class="icon-css3"></span>&emsp;&emsp;CSS</p>
+             <p class="d-flex align-items-center"><span class="icon-git"></span>&emsp;&emsp;Git</p>
+             <p class="d-flex align-items-center"><span class="icon-react"></span>&emsp;&emsp;React.js</p>
            </div>
            <div class="col-md-6 col-6">
-             <p class="d-flex align-items-center"><i class="devicon-bootstrap-plain-wordmark"></i>&emsp;&emsp;Bootstrap</p>
-             <p class="d-flex align-items-center"><i class="fab fa-npm"></i>&emsp;&emsp;Npm</p>
-             <p class="d-flex align-items-center"><i class="devicon-react-original-wordmark"></i>&emsp;&emsp;React</p>
-             <p class="d-flex align-items-center"><img src="assets/images/materialize.png" alt="">&emsp;&emsp;Materialize</p>
-             <p class="d-flex align-items-center"><img src="assets/images/firebase.png" alt="">&emsp;&emsp;Firebase</p>
+             <p class="d-flex align-items-center"><span class="icon-wordpress"></span>&emsp;&emsp;WordPress</p>
+             <p class="d-flex align-items-center"><span class="icon-microsoftexcel"></span>&emsp;&emsp;Excel</p>
            </div>
          </div>    
        </div>
        <div class="col-md-6 soft">
          <h3>Socio-emocionales</h3>
          <div>
-           <p><i class="fas fa-lock-open"></i>&emsp;&emsp;Solución de problemas</p>
-           <p><i class="fas fa-graduation-cap"></i>&emsp;&emsp;Autoaprendizaje</p>
-           <p><i class="fas fa-users"></i>&emsp;&emsp;Trabajo en equipo</p>
-           <p><i class="fas fa-handshake"></i>&emsp;&emsp;Dar y recibir feedback</p>
-           <p><i class="fab fa-medapps"></i>&emsp;&emsp;Adaptabilidad</p>              
+           <p><span class="icon-handshake-o"></span>&emsp;&emsp;Solución de problemas</p>
+           <p><span class="icon-graduation-cap"></span>&emsp;&emsp;Autoaprendizaje</p>
+           <p><span class="icon-group"></span>&emsp;&emsp;Trabajo en equipo</p>
+           <p><span class="icon-handshake-o"></span>&emsp;&emsp;Dar y recibir feedback</p>
+           <p><span class="icon-paper-plane"></span>&emsp;&emsp;Adaptabilidad</p>              
          </div>
        </div>
        
