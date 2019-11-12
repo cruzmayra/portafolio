@@ -54,7 +54,7 @@
        <div class="col-md-6 soft">
          <h3>Socio-emocionales</h3>
          <div>
-           <p><span class="icon-handshake-o"></span>&emsp;&emsp;Solución de problemas</p>
+           <p><span class="icon-unlock-alt"></span>&emsp;&emsp;Solución de problemas</p>
            <p><span class="icon-graduation-cap"></span>&emsp;&emsp;Autoaprendizaje</p>
            <p><span class="icon-group"></span>&emsp;&emsp;Trabajo en equipo</p>
            <p><span class="icon-handshake-o"></span>&emsp;&emsp;Dar y recibir feedback</p>
