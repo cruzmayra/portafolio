@@ -1,18 +1,18 @@
 /*---------- función que centraliza al resto de las funciones ----------*/
- page('/portafolio', e => {
+ page('/', e => {
   $('#principal-nav').addClass('hide')
   $('footer').addClass('hide')
   $('#nav-presentation').removeClass('hide')
   $('#content-me').html(`<section class="d-flex justify-content-center align-items-center description-initial">
   <div class="col-md-12 col-sm-12 text-center description">
     <p>¡Hola! Soy Mayra Cruz,<br>frontend developer.</p>
-    <p><a class="load-landing" href="/portafolio/home">Dale un vistazo a mi portafolio :)</a></p>
+    <p><a class="load-landing" href="/home">Dale un vistazo a mi portafolio :)</a></p>
   </div>
 </section>`)
 } )
 
 
- page('/portafolio/home', e => {
+ page('/home', e => {
    $('#principal-nav').removeClass('hide')
    $('footer').removeClass('hide')
    $('#nav-presentation').addClass('hide')
