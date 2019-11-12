@@ -1,18 +1,18 @@
 /*---------- función que centraliza al resto de las funciones ----------*/
- page('/', e => {
+ page('/portafolio', e => {
   $('#principal-nav').addClass('hide')
   $('footer').addClass('hide')
   $('#nav-presentation').removeClass('hide')
   $('#content-me').html(`<section class="d-flex justify-content-center align-items-center description-initial">
   <div class="col-md-12 col-sm-12 text-center description">
     <p>¡Hola! Soy Mayra Cruz,<br>frontend developer.</p>
-    <p><a class="load-landing" href="/portafolio">Dale un vistazo a mi portafolio :)</a></p>
+    <p><a class="load-landing" href="/portafolio/home">Dale un vistazo a mi portafolio :)</a></p>
   </div>
 </section>`)
 } )
 
 
- page('/portafolio', e => {
+ page('/portafolio/home', e => {
    $('#principal-nav').removeClass('hide')
    $('footer').removeClass('hide')
    $('#nav-presentation').addClass('hide')
@@ -73,7 +73,7 @@
          <div class="card projects" style="background-image: url('assets/images/venus-button.jpg');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Venus e-commerce</h5>
-             <a href="/venus-ecommerce" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/venus-ecommerce" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -81,7 +81,7 @@
          <div class="card projects" style="background-image: url('assets/images/pokedex-button.png');">
            <div class="card-body description-project text-center">
              <h5 class="card-title">Pokedex</h5>
-             <a href="/pokedex" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/pokedex" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -89,7 +89,7 @@
          <div class="card projects" style="background-image: url('assets/images/ticket-hack-button.png');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Ticket-hack</h5>
-             <a href="/ticket-hack" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/ticket-hack" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -97,7 +97,7 @@
          <div class="card projects" style="background-image: url('assets/images/scribere-button.png');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">Scribere</h5>
-             <a href="/scribere" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/scribere" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
        </div>
@@ -105,10 +105,10 @@
          <div class="card projects" style="background-image: url('assets/images/lc-button.jpg');">
            <div class="card-body text-center description-project">
              <h5 class="card-title">LabCar</h5>
-             <a href="/labcar" class="btn view" target="_blank">Acerca del proyecto</a>
+             <a href="/#!/mitrabajo/labcar" class="btn view" target="_blank">Acerca del proyecto</a>
            </div>
          </div>
-       </div>                             
+       </div>
      </div>
    </section>`)
  } )
@@ -116,26 +116,27 @@
  $('.view').click(e => {
   e.preventDefault();
   const pageRef = e.target.getAttribute('href');
+  // console.log(pageRef)
   page(pageRef);
 })
 
-page('/venus-ecommerce', e => {
+page('/mitrabajo/venus-ecommerce', function (e) {
   getData(e.path);
 })
 
-page('/pokedex', e => {
+page('/mitrabajo/pokedex', e => {
   getData(e.path);
 })
 
-page('/ticket-hack', e => {
+page('/mitrabajo/ticket-hack', e => {
   getData(e.path);
 })
 
-page('/scribere', e => {
+page('/mitrabajo/scribere', e => {
   getData(e.path);
 })
 
-page('/labcar', e => {
+page('/mitrabajo/labcar', e => {
   getData(e.path);
 })
 
@@ -182,9 +183,9 @@ page('/labcar', e => {
          </div>
          <div>
            <h4>Ver el proyecto</h4>
-           <p class="text-center"><a href="${project.demo}" target="_blank"><i class="fas fa-eye"></i></a></p>
+           <p class="text-center"><a href="${project.demo}" target="_blank"><span class="icon-link"></span></a></p>
            <h4>Ver código</h4>
-           <p class="text-center"><a href="${project.code}" target="_blank"><i class="fab fa-github-alt"></i></a></p>
+           <p class="text-center"><a href="${project.code}" target="_blank"><span class="icon-github"></span></a></p>
          </div>
        </div>
      </div>
@@ -194,4 +195,4 @@ page('/labcar', e => {
  $('html, body').animate({scrollTop:0}, 'slow');
  }
 
- page.start({ hashbang: false });
+ page.start({ hashbang: true });

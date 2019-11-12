@@ -15,6 +15,7 @@
     chai = this.chai,
     expect = this.expect,
     page = this.page,
+    globalPage = this.page,
     baseTag,
     frame,
     $,
@@ -25,12 +26,13 @@
   }
 
   before(function() {
-
     if (isNode) {
       chai = require('chai');
       expect = chai.expect;
-      page = process.env.PAGE_COV ? require('../index-cov') : require('../index');
+      globalPage = process.env.PAGE_COV ?
+        require('../index-cov') : require('../index');
     } else {
+      globalPage = window.page;
       expect = chai.expect;
     }
 
@@ -40,7 +42,7 @@
 
   });
 
-  var fireEvent = function(node, eventName) {
+  var fireEvent = function(node, eventName, path) {
       var event;
 
       if(typeof testWindow().Event === 'function') {
@@ -64,15 +66,20 @@
         event.which = null;
       }
 
+      if(path) {
+        Object.defineProperty(event, 'path', {
+          value: path
+        });
+      }
+
       node.dispatchEvent(event);
     },
     testWindow = function(){
       return frame.contentWindow;
     },
     beforeTests = function(options, done) {
-      page.callbacks = [];
-      page.exits = [];
       options = options || {};
+      page = globalPage.create();
 
       page('/', function(ctx) {
         called = true;
@@ -81,6 +88,8 @@
 
       function onFrameLoad(){
         if(setbase) {
+          if(options.base)
+            page.base(options.base);
           var baseTag = frame.contentWindow.document.createElement('base');
           frame.contentWindow.document.head.appendChild(baseTag);
 
@@ -88,7 +97,9 @@
         }
 
         options.window = frame.contentWindow;
-        page(options);
+        if(options.strict != null)
+          page.strict(options.strict);
+        page.start(options);
         page(base ? base + '/' : '/');
         done();
       }
@@ -132,6 +143,19 @@
       describe('on page load', function() {
         it('should invoke the matching callback', function() {
           expect(called).to.equal(true);
+        });
+
+        it('should invoke the matching async callbacks', function(done) {
+          page('/async', function(ctx, next) {
+            setTimeout(function() {
+              next();
+            }, 10);
+          }, function(ctx, next) {
+            setTimeout(function() {
+              done();
+            }, 10);
+          });
+          page('/async');
         });
       });
 
@@ -177,6 +201,27 @@
           page('/');
         });
 
+        it('should run async callbacks when exiting the page', function(done) {
+          var visited = false;
+          page('/async-exit', function() {
+            visited = true;
+          });
+
+          page.exit('/async-exit', function(ctx, next) {
+            setTimeout(function() {
+              next();
+            }, 10);
+          }, function(ctx, next) {
+            setTimeout(function () {
+              expect(visited).to.equal(true);
+              done();
+            }, 10);
+          });
+
+          page('/async-exit');
+          page('/');
+        });
+
         it('should only run on matched routes', function(done) {
           page('/should-exit', function() {});
           page('/', function() {});
@@ -217,7 +262,7 @@
 
           page('/', function() {});
 
-          page.exit('*', function(context) {
+          page.exit(function(context) {
             var path = context.path;
             setTimeout( function() {
               expect(path).to.equal('/');
@@ -318,7 +363,10 @@
 
         it('should accommodate URL encoding', function(done) {
           page('/whatever', function(ctx) {
-            expect(ctx.querystring).to.equal(decodeURLComponents ? 'queryParam=string with whitespace' : 'queryParam=string%20with%20whitespace');
+            var expected = decodeURLComponents
+              ? 'queryParam=string with whitespace'
+              : 'queryParam=string%20with%20whitespace';
+            expect(ctx.querystring).to.equal(expected);
             done();
           });
 
@@ -373,6 +421,14 @@
             done();
           });
           page('/ctxparams/test/');
+        });
+        
+        it('should handle optional first param', function(done) {
+          page(/^\/ctxparams\/(option1|option2)?$/, function(ctx) {
+            expect(ctx.params[0]).to.be.undefined;
+            done();
+          });
+          page('/ctxparams/');
         });
       });
 
@@ -447,6 +503,15 @@
           });
 
           fireEvent($('.diff-domain'), 'click');
+        });
+
+        it('works with shadow paths', function() {
+          page('/shadow', function() {
+            expect(true).to.equal(true);
+            page('/');
+          });
+
+          fireEvent($('.shadow-path'), 'click', [$('.shadow-path')]);
         });
       });
 
@@ -545,7 +610,6 @@
             page('/whathever');
           });
         });
-
       });
     },
     afterTests = function() {
@@ -557,6 +621,7 @@
       base = '';
       baseRoute = Function.prototype; // noop
       setbase = true;
+      decodeURLComponents = true;
       document.body.removeChild(frame);
     };
 
@@ -585,6 +650,24 @@
       afterTests();
     });
 
+  });
+
+  describe('Configuration', function() {
+    before(function(done) {
+      beforeTests(null, done);
+    });
+
+    it('Can disable popstate', function() {
+      page.configure({ popstate: false });
+    });
+
+    it('Can disable click handler', function() {
+      page.configure({ click: false });
+    });
+
+    after(function() {
+      afterTests();
+    });
   });
 
   describe('Hashbang option enabled', function() {
@@ -618,8 +701,9 @@
 
     before(function(done) {
       base = '/newBase';
-      page.base(base);
-      beforeTests(null, done);
+      beforeTests({
+        base: '/newBase'
+      }, done);
     });
 
     tests();
@@ -647,13 +731,36 @@
 
   describe('Strict path matching enabled', function() {
     before(function(done) {
-      page.strict(true);
+      beforeTests({
+        strict: true
+      }, done);
+    });
+
+    tests();
+
+    after(function() {
+      afterTests();
+    });
+  });
+
+  describe('.clickHandler', function() {
+    it('is exported by the global page', function() {
+      expect(typeof page.clickHandler).to.equal('function');
+    });
+  });
+
+  describe('Environments without the URL constructor', function() {
+    var URLC;
+    before(function(done) {
+      URLC = global.URL;
+      global.URL = undefined;
       beforeTests(null, done);
     });
 
     tests();
 
     after(function() {
+      global.URL = URLC;
       afterTests();
     });
   });
@@ -677,7 +784,7 @@
       hashbang = false;
     });
 
-    it('test', function(){
+    it('simple route call', function(){
       page('/about', function(ctx){
         expect(ctx.path).to.equal('/about');
       });
