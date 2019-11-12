@@ -1,5 +1,5 @@
 /*---------- función que centraliza al resto de las funciones ----------*/
- page('/', e => {
+ page('/portafolio', e => {
   $('#principal-nav').addClass('hide')
   $('footer').addClass('hide')
   $('#nav-presentation').removeClass('hide')
