@@ -27,7 +27,7 @@
            <h4>¡Hola! Soy Mayra Cruz</h4>
            <p>Desarrolladora frontend radicada en CDMX, amante del poder de la tecnología y del código como generadores de impacto social. Chilanga por adopción. Autodidacta.</p>
            <p>Me gusta asistir a meetups y encontrar inspiración en el trabajo de otros. Busco proponer soluciones integrales por lo que me gustaría desarrollarme como fullstack developer en un futuro.</p>
-           <button type="button" class="btn btn-lg"><a href="assets/curriculum-mayra-cruz.pdf" target="_blank">Descarga mi CV</a></button>
+           <button type="button" class="btn btn-lg"><a href="assets/Mayra-Cruz-Resume.pdf" target="_blank">Descarga mi CV</a></button>
          </div>
        </div>
      </div>

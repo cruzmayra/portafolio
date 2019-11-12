@@ -15,7 +15,7 @@ footer a {
  font-size: 1.7em;  
 }
 
-h2{
+h2 {
   color:#fa7268;
   font-weight: bold;
   margin: 4% 0%;
@@ -90,15 +90,6 @@ footer a:hover,
 #about-me > div.row.skills > div span {
   font-size: 3em;
 }
-
-/* #about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > i {
-  font-size: 3em;
-} */
-
-/* #about-me > div.row.skills > div.col-md-6 > div > div > div > div > p > img {
-  margin-bottom: 46px;
-  width: 3em;
-} */
 
 #about-me > div.row.skills > div.soft {
   background: #38618c;
